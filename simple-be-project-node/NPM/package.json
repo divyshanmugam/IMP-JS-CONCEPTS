@@ -1,0 +1,15 @@
+{
+  "name": "first-npm-project",
+  "version": "1.0.0",
+  "description": "tetsing my npm ",
+  "license": "ISC",
+  "author": "divya",
+  "type": "module",
+  "main": "y",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "superheroes": "^4.0.0"
+  }
+}
