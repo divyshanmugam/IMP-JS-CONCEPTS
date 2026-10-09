@@ -1,0 +1,1 @@
+export default"mongodb://divyshan92_db_user:G8Jvp4DOnDses1Kz@ac-svafvrb-shard-00-00.12ur6bu.mongodb.net:27017,ac-svafvrb-shard-00-01.12ur6bu.mongodb.net:27017,ac-svafvrb-shard-00-02.12ur6bu.mongodb.net:27017/?ssl=true&replicaSet=atlas-ntgtp5-shard-0&authSource=admin&appName=Cluster0";
