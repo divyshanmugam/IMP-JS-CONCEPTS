@@ -1,5 +1,5 @@
 function groupBy(array,key) {
-    return array.reduce(acc,item =>{
+    return array.reduce((acc,item) =>{
         acc[item[key]] ? acc[item[key]].push(item) : acc[item[key]] = [item];
         return acc;
     }, {})
@@ -13,3 +13,4 @@ let arr =[
     {name: 'Eve', age: 35, city: 'Los Angeles'}
 ];
 let groupedByAge = groupBy(arr, 'age');
+console.log('Grouped by age:', groupedByAge);

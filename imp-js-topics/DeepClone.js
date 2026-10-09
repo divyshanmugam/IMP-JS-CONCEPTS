@@ -13,3 +13,6 @@ function deepClone(obj) {
     }
     return clonedObj;
 }
+
+const original = { name: 'Alice', details: { city: 'New York' } };
+console.log('Deep clone:', deepClone(original));

@@ -13,7 +13,7 @@ function parent(x) {
 }
 
 const closure = parent(5);
-// console.log(closure(2));
+console.log('Closure result:', closure(2));
 
 
 function makeCounterWithVar() {
@@ -23,7 +23,7 @@ function makeCounterWithVar() {
         }, i * 1000);
     }
 }
-//console.log(makeCounterWithVar());
+console.log(makeCounterWithVar());
 
 function makeCounterWithLet() {
     for(let i = 0; i < 5; i++) {
@@ -32,6 +32,6 @@ function makeCounterWithLet() {
         }, i * 1000);
     }
 }
-// console.log(makeCounterWithLet());
+console.log(makeCounterWithLet());
 
 

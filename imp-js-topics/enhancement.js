@@ -16,7 +16,8 @@ function findMaxEnhancement(cost, budget) {
 }
 
 // --- Example Usage ---
-const costsArray =; // Indices: 0, 1, 2, 3
+const costsArray = [5, 10, 20, 40]; // Indices: 0, 1, 2, 3
 const userBudget = 50;
 
 const result = findMaxEnhancement(costsArray, userBudget);
+console.log('Maximum enhancement:', result);
