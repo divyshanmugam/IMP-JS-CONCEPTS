@@ -16,6 +16,11 @@ const connectToMongoDB = async () => {
     console.log("MongoDB is already connected.");
     return;
   }
+  const uri = process.env.MONGODB_URI;
+  if (!uri) {
+    throw new Error("MONGODB_URI environment variable is missing!");
+  }
+
   try {
     await mongoose.connect(process.env.MONGODB_URI, {maxPoolSize: 10});
     isConnected = true;

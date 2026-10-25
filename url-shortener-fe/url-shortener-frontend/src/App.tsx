@@ -8,7 +8,7 @@ function App() {
   const [copied, setCopied] = useState(false);
 
   // Replace this with your actual Vercel backend production URL when deployed
-  const API_BASE_URL = 'http://localhost:3000'; 
+  const API_BASE_URL = 'https://tiny-url-gamma.vercel.app'; 
 
   // Client-Side Validation: Ensure the user actually typed a legitimate URL format
   const isValidUrl = (string:string) => {
