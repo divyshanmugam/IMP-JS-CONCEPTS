@@ -173,7 +173,7 @@ const styles = {
     marginTop: '15px',
     color: '#ef4444',
     fontSize: '14px',
-    textAlign: TextAlign.left,
+    textAlign: 'left' as const,
     backgroundColor: '#fee2e2',
     padding: '10px',
     borderRadius: '6px',
