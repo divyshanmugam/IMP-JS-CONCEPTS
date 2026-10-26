@@ -8,7 +8,7 @@ function App() {
   const [copied, setCopied] = useState(false);
 
   // Replace this with your actual Vercel backend production URL when deployed
-  const API_BASE_URL = 'https://tiny-url-gamma.vercel.app'; 
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL; 
 
   // Client-Side Validation: Ensure the user actually typed a legitimate URL format
   const isValidUrl = (string:string) => {
@@ -20,7 +20,7 @@ function App() {
     }
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     setError('');
     setShortUrl('');
@@ -56,7 +56,7 @@ function App() {
       }
 
       // Backend returns the full shortened URL string
-      setShortUrl(data.shortUrl);
+      setShortUrl(data.shortCode);
       setLongUrl(''); // Clear input box on success
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to connect to the backend server.');
@@ -132,7 +132,7 @@ const styles = {
     boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)',
     maxWidth: '500px',
     width: '100%',
-    textAlign: 'center',
+    textAlign: 'center' as const,
   },
   title: {
     fontSize: '28px',
@@ -149,7 +149,7 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     gap: '12px',
-  },
+  } as const,
   input: {
     padding: '14px',
     fontSize: '16px',
@@ -173,7 +173,7 @@ const styles = {
     marginTop: '15px',
     color: '#ef4444',
     fontSize: '14px',
-    textAlign: 'left',
+    textAlign: TextAlign.left,
     backgroundColor: '#fee2e2',
     padding: '10px',
     borderRadius: '6px',
@@ -185,7 +185,7 @@ const styles = {
     padding: '20px',
     borderRadius: '8px',
     border: '1px solid #bbf7d0',
-  },
+  } as const,
   resultLabel: {
     fontSize: '14px',
     fontWeight: '600',
@@ -203,7 +203,7 @@ const styles = {
     fontWeight: '700',
     textDecoration: 'none',
     wordBreak: 'break-all',
-  },
+  } as const,
   copyButton: {
     padding: '8px 12px',
     fontSize: '14px',
