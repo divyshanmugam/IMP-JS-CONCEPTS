@@ -100,7 +100,7 @@ function App() {
           <div style={styles.resultContainer}>
             <p style={styles.resultLabel}>Your Shortened Link:</p>
             <div style={styles.resultBox}>
-              <a href={shortUrl} target="_blank" rel="noopener noreferrer" style={styles.link}>
+              <a href={`${API_BASE_URL}/${shortUrl}`} target="_blank" rel="noopener noreferrer" style={styles.link}>
                 {shortUrl}
               </a>
               <button onClick={handleCopy} style={styles.copyButton}>
